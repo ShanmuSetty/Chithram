@@ -449,6 +449,9 @@ h1.loader {
 #main-content {
   display: none;
 }
+.gtranslate_wrapper {
+  background-color: rgb(0, 0, 0, 0);
+}
 .gtranslate_wrapper select {
   align-self: center;
   width: 100px;
@@ -462,7 +465,7 @@ h1.loader {
   color: #f1f1f1;
 }
 .gtranslate_wrapper option {
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: rgb(0, 0, 0, 0);
 }
 
 .gtranslate_wrapper select:hover {
