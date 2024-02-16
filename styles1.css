@@ -337,6 +337,7 @@ h6 {
   font-family: sans-serif;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0);
+  fill: #fff;
 }
 .gtranslate_wrapper option {
   background-color: rgba(0, 0, 0, 0);
