@@ -466,6 +466,7 @@ h1.loader {
 }
 .gtranslate_wrapper option {
   background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0, 0);
 }
 
 .gtranslate_wrapper select:hover {
