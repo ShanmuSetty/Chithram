@@ -103,7 +103,7 @@ dli.onclick = function () {
   console.log("Delhi");
 };
 goa.onclick = function () {
-  const inputValue = "Goa";
+  const inputValue = "goa";
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("Goa");
@@ -205,7 +205,7 @@ rjs.onclick = function () {
   console.log("Rajasthan");
 };
 skm.onclick = function () {
-  const inputValue = "Sikkim";
+  const inputValue = "sikkim";
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("Sikkim");
@@ -263,10 +263,4 @@ ann.onclick = function () {
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("Andaman and Nicobar");
-};
-dnd.onclick = function () {
-  const inputValue = "Damān-and-Diu";
-  const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
-  window.open(url, "_blank");
-  console.log("Damān and Diu");
 };
