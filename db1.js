@@ -35,134 +35,128 @@ get(statesRef)
       const length = Object.keys(tela).length;
       for (let i = 1; i <= length; i++) {
         let movie = tela["movie-" + i];
-        if (movie) {
-          var imageWrapper = document.createElement("div");
-          imageWrapper.classList.add("scrl-content");
-          imageWrapper.onclick = function () {
-            document.addEventListener("click", function (event) {
-              //----------------------for making the clicked poster active-----------
-              if (event.target.closest(".scrl-content")) {
-                // Clicked on an element inside .scrl-content
-                var scrlcons = document.querySelectorAll(".scrl-content");
-                scrlcons.forEach(function (scrlcon) {
-                  scrlcon.classList.remove("active");
-                });
-                event.target.closest(".scrl-content").classList.add("active");
-              } else {
-                // Clicked outside .scrl-content
-                var scrlcons = document.querySelectorAll(".scrl-content");
-                scrlcons.forEach(function (scrlcon) {
-                  scrlcon.classList.remove("active");
-                });
-              }
-            });
-            //-----------------------------------------------------------------------
-            printContent("content");
-            let movie1 = tela["movie-" + i];
-            var genre = movie1["description"]["genre"];
-            var rating = movie1["description"]["rating"];
-            var direct = movie1["director"];
-            var plot = movie1["description"]["plot"];
-            var platf = movie1["description"]["platform"];
-            var cimp = movie1["cultural_impact"];
-            var imp1 = cimp.split(".");
-            var cast = movie1["cast"]["cast"];
-            var galr = movie1["gallery"];
-            var title = movie1["title"];
-            var clips = movie1["clips"]["urls"];
-            var linkImp = "";
-            var linkHtml = "";
-            var linkCast = "";
-            var linkGal = "";
-            var linkClips = "";
-            var linkPlot = "";
-            for (var platform in platf) {
-              linkHtml +=
-                "<button><a href='" +
-                platf[platform] +
-                "' target='_blank' >" +
-                "Platform" +
-                (parseInt(platform) + 1) +
-                "</a></button>";
+        var imageWrapper = document.createElement("div");
+        imageWrapper.classList.add("scrl-content");
+        imageWrapper.onclick = function () {
+          document.addEventListener("click", function (event) {
+            //----------------------for making the clicked poster active-----------
+            if (event.target.closest(".scrl-content")) {
+              // Clicked on an element inside .scrl-content
+              var scrlcons = document.querySelectorAll(".scrl-content");
+              scrlcons.forEach(function (scrlcon) {
+                scrlcon.classList.remove("active");
+              });
+              event.target.closest(".scrl-content").classList.add("active");
+            } else {
+              // Clicked outside .scrl-content
+              var scrlcons = document.querySelectorAll(".scrl-content");
+              scrlcons.forEach(function (scrlcon) {
+                scrlcon.classList.remove("active");
+              });
             }
-            for (var ci in imp1) {
-              linkImp += "<br>" + imp1[ci] + "<br>";
-            }
-            for (var c in cast) {
-              linkCast += "<div class='cast-content'>" + cast[c] + "</div>";
-            }
-            for (var g in galr) {
-              linkGal +=
-                "<div class='gallery-content'><a href='" +
-                galr[g] +
-                "' target='_blank'><img src='" +
-                galr[g] +
-                "'></a></div>";
-            }
-            for (var cl in clips) {
-              linkClips +=
-                "<section class='clips video-section'><video controls loop src='" +
-                clips[cl] +
-                "'></video></section>";
-            }
-            var descri = document.getElementById("description");
-            function descrifunction() {
-              printContent1("cont", "1");
-              var gen = document.querySelector(".genre");
-              gen.innerHTML = "Genre: " + genre;
-              var dir = document.querySelector(".director");
-              dir.innerHTML = "Director: " + direct;
-              var rat = document.querySelector(".rating");
-              rat.innerHTML = "Rating: " + rating;
-              var plot1 = document.querySelector(".desc-content");
-              plot1.innerHTML =
-                "<div class='title'>" +
-                title +
-                "</div>" +
-                "<br>" +
-                "<h2>" +
-                "Plot: " +
-                "</h2>" +
-                "<h3>" +
-                plot +
-                "</h3>" +
-                "<br>" +
-                "<h2>" +
-                "Platforms: " +
-                "</h2>" +
-                "<br>" +
-                linkHtml;
-            }
-            descri.onclick = descrifunction;
-            imageWrapper.onclick = descrifunction();
-            var impact = document.getElementById("impact");
-            impact.onclick = function () {
-              printContent1("cont", "2");
-              var impa = document.querySelector(".impact-content");
-              impa.innerHTML =
-                "<div class='imp-text'>" + linkImp + "</div>" + linkClips;
-            };
-            var cast = document.getElementById("cast");
-            cast.onclick = function () {
-              printContent1("cont", "3");
-              var cas = document.querySelector(".cast");
-              cas.innerHTML = linkCast;
-            };
-            var gallery = document.getElementById("gallery");
-            gallery.onclick = function () {
-              printContent1("cont", "4");
-              var gall = document.querySelector(".gallery");
-              gall.innerHTML = linkGal;
-            };
+          });
+          //-----------------------------------------------------------------------
+          printContent("content");
+          let movie1 = tela["movie-" + i];
+          var genre = movie1["description"]["genre"];
+          var rating = movie1["description"]["rating"];
+          var direct = movie1["director"];
+          var plot = movie1["description"]["plot"];
+          var platf = movie1["description"]["platform"];
+          var cimp = movie1["cultural_impact"];
+          var imp1 = cimp.split(".");
+          var cast = movie1["cast"]["cast"];
+          var galr = movie1["gallery"];
+          var title = movie1["title"];
+          var clips = movie1["clips"]["urls"];
+          var linkImp = "";
+          var linkHtml = "";
+          var linkCast = "";
+          var linkGal = "";
+          var linkClips = "";
+          var linkPlot = "";
+          for (var platform in platf) {
+            linkHtml +=
+              "<button><a href='" +
+              platf[platform] +
+              "' target='_blank' >" +
+              "Platform" +
+              (parseInt(platform) + 1) +
+              "</a></button>";
+          }
+          for (var ci in imp1) {
+            linkImp += "<br>" + imp1[ci] + "<br>";
+          }
+          for (var c in cast) {
+            linkCast += "<div class='cast-content'>" + cast[c] + "</div>";
+          }
+          for (var g in galr) {
+            linkGal +=
+              "<div class='gallery-content'><a href='" +
+              galr[g] +
+              "' target='_blank'><img src='" +
+              galr[g] +
+              "'></a></div>";
+          }
+          for (var cl in clips) {
+            linkClips +=
+              "<section class='clips video-section'><video controls loop src='" +
+              clips[cl] +
+              "'></video></section>";
+          }
+          var descri = document.getElementById("description");
+          descri.onclick = function () {
+            printContent1("cont", "1");
+            var gen = document.querySelector(".genre");
+            gen.innerHTML = "Genre: " + genre;
+            var dir = document.querySelector(".director");
+            dir.innerHTML = "Director: " + direct;
+            var rat = document.querySelector(".rating");
+            rat.innerHTML = "Rating: " + rating;
+            var plot1 = document.querySelector(".desc-content");
+            plot1.innerHTML =
+              "<div class='title'>" +
+              title +
+              "</div>" +
+              "<br>" +
+              "<h2>" +
+              "Plot: " +
+              "</h2>" +
+              "<h3>" +
+              plot +
+              "</h3>" +
+              "<br>" +
+              "<h2>" +
+              "Platforms: " +
+              "</h2>" +
+              "<br>" +
+              linkHtml;
           };
+          var impact = document.getElementById("impact");
+          impact.onclick = function () {
+            printContent1("cont", "2");
+            var impa = document.querySelector(".impact-content");
+            impa.innerHTML =
+              "<div class='imp-text'>" + linkImp + "</div>" + linkClips;
+          };
+          var cast = document.getElementById("cast");
+          cast.onclick = function () {
+            printContent1("cont", "3");
+            var cas = document.querySelector(".cast");
+            cas.innerHTML = linkCast;
+          };
+          var gallery = document.getElementById("gallery");
+          gallery.onclick = function () {
+            printContent1("cont", "4");
+            var gall = document.querySelector(".gallery");
+            gall.innerHTML = linkGal;
+          };
+        };
 
-          const image = document.createElement("img");
-          image.src = movie.poster;
-          imageWrapper.appendChild(image);
-          searchResults.appendChild(imageWrapper);
-        } else {
-          continue;
-        }
+        const image = document.createElement("img");
+        image.src = movie.poster;
+        imageWrapper.appendChild(image);
+        searchResults.appendChild(imageWrapper);
       }
     } else {
       console.log("No data available");
@@ -171,7 +165,6 @@ get(statesRef)
   .catch((err) => {
     console.error("!!Error fetching data!!", err);
   });
-
 //------------printing dynamically------------//
 
 function printContent(categoryId) {
