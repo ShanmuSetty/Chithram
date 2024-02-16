@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn-icons-png.flaticon.com/512/2798/2798007.png"
+    />
+    <title>Layout</title>
+    <link rel="stylesheet" href="layoutstyle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body class="main container">
+    <div id="loader-overlay">
+      <h1 class="loader">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+      </h1>
+    </div>
+    <div class="inner container1" id="main-content">
+      <div class="nav-container">
+        <nav class="navbar container" role="navigation">
+          <ul class="ulstyle">
+            <li class="navlist" id="description">DESCRIPTION</li>
+            <li class="navlist" id="impact">CULTURAL IMPACT</li>
+            <li class="navlist" id="cast">CAST</li>
+            <li class="navlist" id="gallery">GALLERY</li>
+            <li class="navlist" id="translator">
+              <div class="gtranslate_wrapper"></div>
+            </li>
+            <li class="navlist">
+              <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="dropdown-content" id="drpcon">
+                <a href="index.html">Home</a>
+                <a href="index.html#mapmain">Map</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="inner2 container2">
+        <div class="scrlbar"></div>
+        <div class="content" id="content"></div>
+      </div>
+    </div>
+    <script src="layoutjs.js"></script>
+    <script type="module" src="db1.js"></script>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        wrapper_selector: ".gtranslate_wrapper",
+      };
+    </script>
+    <script
+      src="https://cdn.gtranslate.net/widgets/latest/dropdown.js"
+      defer
+    ></script>
+    <script src="ttspeech.js"></script>
+  </body>
+</html>
