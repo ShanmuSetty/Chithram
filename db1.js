@@ -14,7 +14,7 @@ const genrein = document.querySelector(".genre");
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAJeXTMNsT2YkHA62B7_dpku_yWt1uHxrs",
+  apiKey: `$(process.env.api_key)`,
   authDomain: "mainproject-1js.firebaseapp.com",
   projectId: "mainproject-1js",
   storageBucket: "mainproject-1js.appspot.com",
