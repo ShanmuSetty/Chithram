@@ -223,7 +223,7 @@ trp.onclick = function () {
   console.log("Tripura");
 };
 utp.onclick = function () {
-  const inputValue = "Uttar-Pradesh";
+  const inputValue = "uttar-pradesh";
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("Uttar Pradesh");
@@ -235,7 +235,7 @@ utc.onclick = function () {
   console.log("Uttaranchal");
 };
 wbl.onclick = function () {
-  const inputValue = "West Bengal";
+  const inputValue = "West-Bengal";
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("West Bengal");
@@ -247,13 +247,13 @@ lkd.onclick = function () {
   console.log("Lakshadweep");
 };
 jak.onclick = function () {
-  const inputValue = "Jammu-and-Kashmir";
+  const inputValue = "jammu-and-kashmir";
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("Jammu and Kashmir");
 };
 ldk.onclick = function () {
-  const inputValue = "Ladakh";
+  const inputValue = "ladakh";
   const url = `layout.html?input=${encodeURIComponent(inputValue)}`;
   window.open(url, "_blank");
   console.log("Ladakh");

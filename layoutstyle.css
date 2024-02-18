@@ -2,7 +2,12 @@
 html {
   background-color: black;
 }
-
+html::-webkit-scrollbar {
+  display: none;
+}
+div::-webkit-scrollbar {
+  display: none;
+}
 * {
   margin: 0;
 }

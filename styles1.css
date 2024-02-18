@@ -3,7 +3,12 @@ html {
   -webkit-text-size-adjust: 100%;
   font-family: sans-serif;
 }
-
+html::-webkit-scrollbar {
+  display: none;
+}
+div::-webkit-scrollbar {
+  display: none;
+}
 body {
   margin: 0;
 }
