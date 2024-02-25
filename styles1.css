@@ -610,9 +610,9 @@ h6 {
   border-radius: 57px;
   padding: 28px 58px;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
-  transition: all 0.5s;
+  transition: all 0.4s ease-in-out;
 }
 .submit-button:hover {
   cursor: pointer;
@@ -620,13 +620,6 @@ h6 {
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid #ffd447;
 }
-
-.success-message {
-  background-color: var(--black);
-  border-radius: 30px;
-  overflow: visible;
-}
-
 .mailing-list {
   margin-top: 188px;
   margin-bottom: 88px;
@@ -1230,7 +1223,7 @@ svg {
 svg path {
   stroke: rgba(0, 0, 0, 0.4);
   stroke-width: 1px;
-  fill: rgba(151, 151, 151, 0.8);
+  fill: rgb(125, 125, 125);
 }
 svg path:hover {
   cursor: pointer;
